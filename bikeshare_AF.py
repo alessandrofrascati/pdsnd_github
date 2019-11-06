@@ -133,14 +133,14 @@ def load_data(city, month, day):
                 
     # Displaying the data-frame that will be analized (if applicable)
     print('Displaying the data-set...')
-    disp_data_flag = input('Do you want to have a look at the first 5 trips?\n'
+    disp_data_flag = input('Do you want to have a look at the first 10 trips?\n'
                            'Enter yes (Y) to display them or press any key to continue with the analysis!\n')
     number_of_display = 0
-    count = 5;
+    count = 10;
     while disp_data_flag.lower() == 'y':
         number_of_display = 1
-        print(df[count-5:count])
-        count += 5
+        print(df[count-10:count])
+        count += 10
         disp_data_flag = input('Do you want to have a look at the next 5 individual trips?\n'
                                'Enter yes (Y) to display them or press any key to continue with the analysis!\n')
     
