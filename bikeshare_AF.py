@@ -38,15 +38,15 @@ def get_filters():
     # Get user input for city (with restart if applicable)
     restart = True    
     while restart:
-        print('Data selection...')
-        city = input ('Which data-set would you like to analize? \n'
+        print('\33[32m'+ 'Data selection...' + '\x1b[0m')
+        city = input ('\33[31m' + 'Which data-set would you like to analize? \n'
                       'Please enter the name of the city: {}\n'.format(city_list))
         while city.title() not in city_list:
             city = input('Oops, looks like you mispelled the city name!\n'
                           'Please re-enter a valid city name: {}\n'.format(city_list))    
         # Checking if the correct data is going to be analyzed    
         r_input = input('You are going to analyze data from {}! Is that correct?\n'
-                        'Enter yes (Y) to continue or any key to restart!\n'.format(city.title()))     
+                        'Enter yes (Y) to continue or any key to restart!\n'.format(city.title()) + '\33[0m')    
         if r_input.lower() == 'y':
             restart = False  
         else:
@@ -56,7 +56,7 @@ def get_filters():
     city = city.lower()
     
     # Get user input for time-filtering (filtering by day, month or no data filtering)
-    time_filter = input('Which time-filter would you like to apply to the data? \n'
+    time_filter = input('\33[31m' + 'Which time-filter would you like to apply to the data? \n'
                         'Please enter the filter mode: {}\n'.format(time_filter_list))
     while time_filter.lower() not in time_filter_list:
          time_filter = input('Oops, looks like you mispelled the input for time-filtering!\n'
@@ -72,7 +72,7 @@ def get_filters():
                           'Please re-enter a valid full month name: {}\n'.format(month_list))  
         month = month.title()    
         day = 'all'
-        print('-'*80)
+        print('\33[0m' + '-'*80)
         print('Data from {} will be filtered by "{}"= {}'.format(city.title(),time_filter,month))
         
     # Filtering by day of week (all, monday, tuesday, ... sunday)
@@ -84,15 +84,15 @@ def get_filters():
                           'Please re-enter a valid full day name: {}\n'.format(day_list))        
         day = day.title()
         month = 'all'
-        print('-'*80)
+        print('\33[0m' + '-'*80)
         print('Data from {} will be filtered by "{}"= {}'.format(city.title(),time_filter,day))
         
     # No time-filtering (i.e. all available data are considered) 
     if time_filter == 'none':
         day = 'all';
         month = 'all';
-        print('-'*80)
-        print('The entire data-set from {} will be analyzed'.format(city.title()))
+        print('\33[0m' + '-'*80)
+        print('' + 'The entire data-set from {} will be analyzed'.format(city.title()))
         
         
     print('-'*80)
@@ -132,17 +132,17 @@ def load_data(city, month, day):
         df = df[df['Week Day'] == day]
                 
     # Displaying the data-frame that will be analized (if applicable)
-    print('Displaying the data-set...')
-    disp_data_flag = input('Do you want to have a look at the first 10 trips?\n'
-                           'Enter yes (Y) to display them or press any key to continue with the analysis!\n')
+    print('\33[32m' + 'Displaying the data-set...' + '\x1b[0m')
+    disp_data_flag = input('\33[31m' + 'Do you want to have a look at the first 10 trips?\n'
+                           'Enter yes (Y) to display them or press any key to continue with the analysis!\n' + '\33[0m')
     number_of_display = 0
     count = 10;
     while disp_data_flag.lower() == 'y':
         number_of_display = 1
         print(df[count-10:count])
         count += 10
-        disp_data_flag = input('Do you want to have a look at the next 5 individual trips?\n'
-                               'Enter yes (Y) to display them or press any key to continue with the analysis!\n')
+        disp_data_flag = input('\33[31m' + 'Do you want to have a look at the next 5 individual trips?\n'
+                               'Enter yes (Y) to display them or press any key to continue with the analysis!\n' + '\33[0m')
     
     if number_of_display == 0:
         print('-'*80) 
@@ -180,7 +180,7 @@ def time_stats(df,month,day):
     """
     
     # Start computing 
-    print('Calculating The Most Frequent Times of Travel...\n')
+    print('\33[32m' + 'Calculating The Most Frequent Times of Travel...\n' + '\x1b[0m')
     
     start_time = time.time()
 
@@ -220,7 +220,7 @@ def station_stats(df):
         (df) - Pandas DataFrame containing city data eventually filtered by month and day   
     """
  
-    print('Calculating The Most Popular Stations and Trip...\n')
+    print('\33[32m' + 'Calculating The Most Popular Stations and Trip...\n' + '\x1b[0m')
     start_time = time.time()
 
     # Display most commonly used start station
@@ -252,7 +252,7 @@ def trip_duration_stats(df):
         (df) - Pandas DataFrame containing city data eventually filtered by month and day      
     """
 
-    print('Calculating Trip Duration...\n')
+    print('\33[32m' + 'Calculating Trip Duration...\n' + '\x1b[0m')
     start_time = time.time()
 
     # Display total travel time
@@ -274,7 +274,7 @@ def user_stats(df):
         (df) - Pandas DataFrame containing city data eventually filtered by month and day      
     """
     
-    print('Calculating User Stats...\n')
+    print('\33[32m' + 'Calculating User Stats...\n' + '\x1b[0m')
     start_time = time.time()
 
     # Display counts of user types
