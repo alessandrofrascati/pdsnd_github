@@ -63,8 +63,8 @@ Three raw-data files are used as inputs:
 - new_york_city.csv
 - washington.csv
 
-One Python script:
-bikeshare_AF.py
+One Python script is used to load and analyze the data:
+- bikeshare_AF.py
 
 ### Date created
 Project created on Wednesday, ‎November ‎6, ‎2019, ‏‎5:43:59 PM
