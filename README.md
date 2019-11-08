@@ -6,6 +6,7 @@ Explore US Biskeshare Data
 
 ### Description
 Data related to bike share systems for three major cities in the United States (Chicago, New York City, and Washington) are analyzed.
+A Python script is used to import raw data and compute descriptive statistics.
 
 ### Files used
 chicago.csv
