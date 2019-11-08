@@ -9,9 +9,12 @@ Data related to bike share systems for three major cities in the United States (
 A Python script is used to import raw data and compute descriptive statistics.
 
 ### Files used
-chicago.csv
-new_york_city.csv
-washington.csv
+Three raw-data files:
+1) chicago.csv
+2) new_york_city.csv
+3) washington.csv
+
+One Python script:
 bikeshare_AF.py
 
 ### Credits
