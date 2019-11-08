@@ -5,7 +5,7 @@ Project created on Wednesday, ‎November ‎6, ‎2019, ‏‎5:43:59 PM
 Explore US Biskeshare Data
 
 ### Description
-Describe what your project is about and what it does
+Data related to bike share systems for three major cities in the United States (Chicago, New York City, and Washington) are analyzed.
 
 ### Files used
 Include the files used
