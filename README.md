@@ -2,13 +2,13 @@
 **Explore US Biskeshare Data**
 
 ## Table of contents
-* [General Info](#general-info)
-* [Data Set](#data-set)
+* [General info](#general-info)
+* [Data set](#data-set)
 * [Methodology](#methodology)
-* [Filed Used](#files-used)
-* [Date Created](#date-created)
+* [Filed used](#files-used)
+* [Date created](#date-created)
 * [Contact](#contact)
-* [Credit](#credit)
+* [Credits](#credit)
 
 ### Description
 Data related to bike share systems for three major cities in the United States (Chicago, New York City, and Washington) are analyzed.
