@@ -16,7 +16,7 @@ Data related to bike share systems for three major cities in the United States (
 ### Data set
 Randomly selected data for the first six months of 2017 for all three cities are provided by [Motivate](https://www.motivateco.com/), a bike share system provider for many major cities in the United States.
 
-Raw data-sets contains the same core six columns, i.e.:
+Raw data-sets contain the same core six columns, i.e.:
 - Start Time
 - End Time
 - Trip Duration
