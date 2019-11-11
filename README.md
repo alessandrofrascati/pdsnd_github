@@ -66,6 +66,8 @@ Three raw-data files are used as inputs:
 One Python script is used to load and analyze the data:
 - bikeshare_AF.py
 
+**Python Version**: Python 3.7.3 64-bit  
+
 ### Date created
 Project created on Wednesday, ‎November ‎6, ‎2019, ‏‎5:43:59 PM
 
