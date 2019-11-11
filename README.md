@@ -73,4 +73,5 @@ Project created on Wednesday, ‎November ‎6, ‎2019, ‏‎5:43:59 PM
 Please contact [Alessandro Frascati](alessandro.frascati@shell.com)
 
 ### Credits
-[Markdown Quick Reference](https://en.support.wordpress.com/markdown-quick-reference/)
+- [Markdown Quick Reference](https://en.support.wordpress.com/markdown-quick-reference/)
+- [Stack Overflow](https://stackoverflow.com/questions/287871/how-to-print-colored-text-in-terminal-in-python)
