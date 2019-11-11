@@ -44,7 +44,6 @@ def get_filters():
     # Get user input for city (with restart if applicable)
     restart = True    
     while restart:
-#        print(CGREEN+ 'Data selection...' + CEND)
         print(CGREEN + 'Data selection...' + CGREEN)
         city = input (CRED + 'Which data-set would you like to analize? \n'
                       'Please enter the name of the city: {}\n'.format(city_list))
